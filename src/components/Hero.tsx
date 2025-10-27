@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Music, MapPin, Users } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -29,20 +30,24 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button 
-              size="lg" 
-              variant="secondary"
-              className="text-lg px-8 py-6 shadow-glow hover:shadow-elegant transition-all duration-300"
-            >
-              Browse Showcases
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-lg px-8 py-6 bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
-            >
-              Get Started
-            </Button>
+            <Link to="/discover">
+              <Button 
+                size="lg" 
+                variant="secondary"
+                className="text-lg px-8 py-6 shadow-glow hover:shadow-elegant transition-all duration-300"
+              >
+                Browse Showcases
+              </Button>
+            </Link>
+            <Link to="/auth">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-lg px-8 py-6 bg-primary-foreground/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">

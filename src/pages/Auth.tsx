@@ -5,8 +5,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Music, MapPin, Users, Shield } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
+  const navigate = useNavigate();
+
+  const handleAdminSignIn = () => {
+    // TODO: Add actual authentication logic
+    navigate("/admin/dashboard");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -149,7 +157,7 @@ const Auth = () => {
                       <Label htmlFor="admin-password">Password</Label>
                       <Input id="admin-password" type="password" placeholder="••••••••" />
                     </div>
-                    <Button className="w-full" size="lg">
+                    <Button className="w-full" size="lg" onClick={handleAdminSignIn}>
                       Sign In
                     </Button>
                   </CardContent>

@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import Discover from "./pages/Discover";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/admin/Dashboard";
+import CreateShowcase from "./pages/admin/CreateShowcase";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +22,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/admin/create-showcase" element={<CreateShowcase />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
